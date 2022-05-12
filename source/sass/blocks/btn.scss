@@ -1,18 +1,36 @@
 .btn {
   display: inline-flex;
-  margin: 10px 0;
-  padding: 10px 20px;
+  padding: 15px 25px;
 
+  font-family: 'Roboto Condensed';
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
   color: $color-default-white;
+  letter-spacing: 0.05em;
+  border-radius: 3px;
 
-  background-color: $color-neon-blue;
+  background-color: $color-deep-sky-blue;
+  color: $color-alice-blue;
   border: none;
   cursor: pointer;
 
   transition: opacity $trans-default;
 
-  &--red {
-    background-color: $color-torch-red;
+  &--transparency {
+    background-color: $color-transparent;
+    border: 1px solid $color-alice-blue;
+  }
+
+  &--black {
+    background-color: $color-black-peral-2;
+    border: none;
+  }
+
+  &--blue {
+    background-color: $color-transparent;
+    color: $color-deep-sky-blue;
+    border: 1px solid $color-deep-sky-blue;
   }
 
   &:disabled {
