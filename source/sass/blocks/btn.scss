@@ -2,7 +2,7 @@
   display: inline-flex;
   padding: 15px 25px;
 
-  font-family: 'Roboto Condensed';
+  font-family: 'Roboto Condensed', 'Roboto', 'Arial';
   font-weight: 700;
   text-align: center;
   text-transform: uppercase;
@@ -20,6 +20,12 @@
   &--transparency {
     background-color: $color-transparent;
     border: 1px solid $color-alice-blue;
+    width: 160px;
+    height: 40px;
+    box-sizing: border-box;
+    padding: 10px 15px;
+    font-size: 14px;
+    line-height: 16px;
   }
 
   &--black {

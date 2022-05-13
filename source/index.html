@@ -10,11 +10,35 @@
   </head>
   <body>
     <div class="wrapper">
-      <header>
-        <div class="container"></div>
+      <header class="header">
+        <div class="container header__container">
+          <a href="#" class="logo logo--small header__logo">
+            <img class="logo__svg" src="img/svg/logo.svg" width="55" height="55"  alt="Smart Device" title="Smart Device">
+            <div class="logo__description">
+              <span class="logo__title">Smart Device</span>
+              <span class="logo__subtitle">умные технологии</span>
+            </div>
+          </a>
+          <div class="header__contacts">
+            <a class="header__link" href="mailto:info@sd.ru">
+              <svg class="header__svg" width="20" height="20">
+                <use xlink:href="img/sprite_auto.svg#email"></use>
+              </svg>
+              <span class="header__link-text">info@sd.ru</span>
+            </a>
+            <a class="header__link" href="tel:+74950005252">
+              <svg class="header__svg" width="20" height="20">
+                <use xlink:href="img/sprite_auto.svg#phone"></use>
+              </svg>
+              <span class="header__link-text">+7 (495) 000 52 52</span>
+            </a>
+          </div>
+          <a href="#" class="header__callback btn btn--transparency" data-open-modal="callback">Заказать звонок</a>
+        </div>
+      
       </header>
       <main>
-        <section class="intro">
+        <!-- <section class="intro">
           <div class="container">
             <h1>Тестовая страница.</h1>
             <p>На данной странице показан пример модальных окон.</p>
@@ -22,7 +46,7 @@
             <p><a class="btn" href="#" data-open-modal="feedback">modal--feedback link</a></p>
             <p><a class="btn" href="#" data-open-modal="success">modal--success link</a></p>
           </div>
-        </section>
+        </section> -->
       </main>
       <footer>
         <div class="container"></div>
@@ -30,7 +54,7 @@
     </div>
 
     <!-- Модалки -->
-    <div class="modal modal--preload" data-modal="feedback">
+    <div class="modal modal--preload" data-modal="callback">
       <div class="modal__wrapper">
         <div class="modal__overlay" data-close-modal></div>
         <div class="modal__content">
