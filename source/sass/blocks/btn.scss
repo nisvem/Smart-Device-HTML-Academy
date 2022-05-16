@@ -7,8 +7,11 @@
   text-align: center;
   text-transform: uppercase;
   color: $color-default-white;
+  text-align: center;
   letter-spacing: 0.05em;
   border-radius: 3px;
+  font-size: 18px;
+  line-height: 21px;
 
   background-color: $color-deep-sky-blue;
   color: $color-alice-blue;
@@ -16,6 +19,17 @@
   cursor: pointer;
 
   transition: opacity $trans-default;
+
+  @include vp-1023 {
+    font-size: 18px;
+    line-height: 21px;
+  }
+
+  @include vp-767 {
+    font-size: 14px;
+    line-height: 16px;
+    padding: 10px 30px;
+  }
 
   &--transparency {
     background-color: $color-transparent;

@@ -1,5 +1,6 @@
 import {iosVhFix} from './utils/ios-vh-fix';
 import {initModals} from './modules/modals/init-modals';
+import './modules/accordion';
 
 // ---------------------------------
 
@@ -20,12 +21,11 @@ window.addEventListener('DOMContentLoaded', () => {
   });
 });
 
-document.querySelectorAll('[data-accordion]').forEach((accordion) => {
-  accordion.addEventListener('click', ()=> {
-    accordion.closest('.footer__section').classList.toggle('is--close');
-    accordion.closest('.footer__section').classList.toggle('is--open');
+if (window.screen.width < 768) {
+  document.querySelectorAll('[data-name-mobile]').forEach((el) => {
+    el.innerHTML = el.dataset.nameMobile;
   });
-});
+}
 
 // ---------------------------------
 
@@ -33,7 +33,7 @@ document.querySelectorAll('[data-accordion]').forEach((accordion) => {
 
 // привязывайте js не на классы, а на дата атрибуты (data-validate)
 
-// вместо модификаторов .block--active используем утилитарные классы
+// вместо модификаторов .block--active используем утилитßарные классы
 // .is-active || .is-open || .is-invalid и прочие (обязателен нейминг в два слова)
 // .select.select--opened ❌ ---> [data-select].is-open ✅
 
