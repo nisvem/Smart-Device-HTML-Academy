@@ -2,7 +2,7 @@
   display: inline-flex;
   padding: 15px 25px;
 
-  font-family: 'Roboto Condensed', 'Roboto', 'Arial';
+  font-family: "Roboto Condensed", "Roboto", "Arial", sans-serif;
   font-weight: 700;
   align-self: center;
   text-transform: uppercase;
@@ -15,7 +15,6 @@
   line-height: 21px;
 
   background-color: $color-deep-sky-blue;
-  color: $color-alice-blue;
   border: none;
   cursor: pointer;
 

@@ -10,20 +10,21 @@ $color-transparent:                 rgba(255, 255, 255, 0);
 // Project palette
 // для нейминга цветов используем https://www.htmlcsscolor.com/hex/334482
 
-$color-black-peral:                 #03101B;
+$color-black-peral:                 #03101b;
 $color-neon-blue:                   #2c39f2;
 $color-torch-red:                   #ff1553;
-$color-alice-blue:                  #F2F5F7;
-$color-alice-blue-2:                #F8FDFF;
-$color-deep-sky-blue:               #00B2FF;
+$color-alice-blue:                  #f2f5f7;
+$color-alice-blue-2:                #f8fdff;
+$color-deep-sky-blue:               #00b2ff;
 $color-black-peral-2:               #041427;
 $color-black-peral-3:               #041827;
+$color-whisper:                     #ebebeb;
 
 // Gradient
 
 // $black-to-right:                    linear-gradient(90deg, rgba(0, 0, 0, 0.75) 0%, rgba(0, 0, 0, 0) 75%);
 $black-peral-to-right:              linear-gradient(180deg, rgb(4, 24, 39) 84.9%, rgba(4, 24, 39, 0) 100%);
-$black-peral-to-black-peral:        linear-gradient(180deg, rgba(25, 32, 36, 0.702) 71.72%, rgba(25, 32, 36, 0) 100%);
+$black-peral-to-black-peral:        linear-gradient(180deg, rgba(25, 32, 36, 0.7) 71.72%, rgba(25, 32, 36, 0) 100%);
 // Typography
 // ---------------------------------
 
