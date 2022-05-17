@@ -1,0 +1,94 @@
+.company {
+    padding-top: 60px;
+    padding-bottom: 100px;
+
+    @include vp-1023 {
+        padding-top: 40px;
+        padding-bottom: 80px;
+    }
+
+    @include vp-767 {
+        padding-top: 25px;
+        
+    }
+
+    &__picture {
+        min-width: 150px;
+        min-height: 320px;
+        margin-right: 100px;
+
+        @include vp-1023 {
+            margin-right: 30px;
+        }
+
+        @include vp-767 {
+            display: none;
+        }
+    }
+
+    &__container {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: space-between;
+    }
+
+    &__title {
+        font-family: 'Roboto Condensed';
+        font-weight: 400;
+        font-size: 36px;
+        line-height: 45px;
+        color: $color-black-peral-3;
+        margin: 0 0 15px 0;
+
+        @include vp-767 {
+            font-size: 28px;
+            line-height: 39px;
+        }
+    }
+
+    &__btn {
+        margin-top: 20px;
+    }
+
+    &__text {
+        font-family: 'PT Mono';
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 22px;
+        color: $color-black-peral-3;
+        margin: 0;
+        padding-bottom: 22px;
+
+        @include vp-1023 {
+            padding-bottom: 22px;
+        }
+
+        @include vp-767 {
+            font-size: 14px;
+            line-height: 19px;
+            padding-bottom: 19px;
+        }
+    }
+
+    &__texts {
+        overflow: hidden;
+
+        &--open {
+            height: 100%;
+        }
+
+        &--closed {
+            height: calc(22px * 8);
+
+            @include vp-1023 {
+                height: calc(22px * 12);
+            }
+
+            @include vp-767 {
+                height: calc(19px * 11);
+            }
+
+        }
+    }
+}
