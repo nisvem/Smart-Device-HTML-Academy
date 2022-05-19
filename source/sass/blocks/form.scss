@@ -1,0 +1,158 @@
+.form {
+  display: flex;
+  flex-direction: column;
+
+  &--modal {
+    & .form__name-phone {
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    & .form__textarea {
+      margin-bottom: 25px;
+    }
+
+    & .form__send-block {
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: stretch;
+      gap: 20px;
+    }
+
+    & .form__personal {
+      width: 100%;
+    }
+
+    & .form__btn {
+      width: 100%;
+    }
+  }
+
+  &__name-phone {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 30px;
+    margin-bottom: 20px;
+
+    @include vp-767 {
+      flex-direction: column;
+      gap: 20px;
+    }
+  }
+
+  &__input,
+  &__textarea {
+    flex: 1;
+    font-family: "PT Mono", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    color: $color-default-white;
+    outline: 0;
+    background: rgba($color-black-peral-2, 0.15);
+    border: 0;
+    border-radius: 3px;
+
+    &::placeholder {
+      color: $color-default-white;
+    }
+  }
+
+  &__input {
+    height: 50px;
+    padding: 15px;
+
+    &--error {
+      border: 1px solid rgba($color-torch-red, 0.5);
+
+      &[type="checkbox"] + .form__personal-label::before {
+        border: 1px solid rgba($color-torch-red, 0.5);
+      }
+    }
+  }
+
+  &__textarea {
+    max-height: 155px;
+    margin-bottom: 35px;
+    padding: 25px 15px;
+
+    @include vp-767 {
+      max-height: 180px;
+      margin-bottom: 32px;
+    }
+  }
+
+  &__send-block {
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+    justify-content: space-between;
+    align-items: flex-end;
+
+    @include vp-767 {
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+      gap: 25px;
+    }
+  }
+
+  &__personal {
+    width: 260px;
+
+    @include vp-1023 {
+      margin-right: 60px;
+      margin-bottom: 5px;
+    }
+
+    @include vp-767 {
+      margin: auto;
+    }
+  }
+
+  &__personal-label {
+    display: flex;
+    font-family: "PT Mono", sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+    color: $color-default-white;
+    opacity: 0.8;
+    position: relative;
+    padding-left: 26px;
+    cursor: pointer;
+
+    @include vp-1023 {
+      width: 260px;
+      height: 30px;
+      margin-right: 60px;
+      margin-bottom: 5px;
+    }
+
+    &::before {
+      content: "";
+      display: flex;
+      width: 15px;
+      height: 15px;
+      position: absolute;
+      top: calc(50% - 7.5px);
+      left: 0;
+      border: 1px solid $color-default-white;
+      border-radius: 2px;
+    }
+  }
+
+  &__personal-input {
+    display: none;
+
+    &:checked + .form__personal-label {
+      &::before {
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='9' height='6' viewBox='0 0 9 6' fill='none'%3E%3Cpath d='M0.988525 2.33333L3.7778 5L7.96171 1' stroke='white'/%3E%3C/svg%3E");
+      }
+    }
+  }
+}

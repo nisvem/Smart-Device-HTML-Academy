@@ -42,7 +42,7 @@
             <div class="banner__block">
               <h1 class="banner__title">Печатные платы</h1>
               <p class="banner__text">производство и монтаж, поставка комплектующих, блоков и модулей</p>
-              <a href="#" class="btn banner__btn" data-name-mobile="Бесплатная консультация">Получить бесплатную консультацию</a>
+              <a href="#feedback" class="btn banner__btn" data-name-mobile="Бесплатная консультация">Получить бесплатную консультацию</a>
             </div>
           </div>
         </section>
@@ -100,7 +100,8 @@
         <section class="company">
           <div class="container company__container">
             <picture class="company__picture">
-              <img src="/img/2022.png" srcset="/img/2022@2x.png 2x" width="150" height="320" alt="2022">
+              <source type="image/webp" srcset="/img/2022.webp 1x, /img/2022@2x.webp 2x">
+              <img src="/img/2022.png" srcset="img/2022@2x.png 2x"  width="150" height="320" alt="2022">
             </picture>
             <div class="company__block" data-toggle>
               <h2 class="company__title">О компании</h2>
@@ -128,7 +129,7 @@
               <li class="service__item service__item--two">
                 <a href="#" class="service__link">
                   <p class="service__name">
-                    Монтаж печатных <br>плат
+                    Монтаж печатных плат
                   </p>
                 </a>
               </li>
@@ -142,22 +143,26 @@
             </ul>
           </div>
         </section>
-        <section class="feedback">
+        <section class="feedback" id="feedback">
           <div class="container feedback__container">
+            <picture class="feedback__picture">
+              <source type="image/webp" srcset="/img/airplane.webp 1x, /img/airplane@2x.webp 2x">
+              <img src="/img/airplane.png" srcset="/img/airplane@2x.png 2x"  width="510" height="285" alt="Бумажный самолет">
+            </picture>
             <div class="feedback__block">
               <h2 class="feedback__title">Остались вопросы? Задайте их нам!</h2>
               <p class="feedback__description">Мы проконсультируем Вас бесплатно</p>
-              <form action="POST" class="feedback__form form"> 
-                <div class="from__name-phone">
-                  <input name="name" type="text" class="form__input" placeholder="Имя">
-                  <input name="phone" type="text" class="form__input" placeholder="Телефон">
+              <form action="https://echo.htmlacademy.ru" method="post" class="feedback__form form" data-form>
+                <div class="form__name-phone">
+                  <input name="name" type="text" class="form__input" data-input-name placeholder="Имя">
+                  <input name="phone" type="text" class="form__input" data-input-phone placeholder="Телефон">
                 </div>
-                <textarea name="question" id="" cols="30" rows="10" class="form__textarea" placeholder="Ваш запрос"></textarea>
+                <textarea name="question" cols="30" rows="10" class="form__textarea" data-input-textarea placeholder="Ваш запрос"></textarea>
                 <div class="form__send-block">
-                  <button type="submit" class="btn form__btn btn--black">Задать вопрос</button>
+                  <button type="submit" class="btn form__btn btn--black" data-btn>Задать вопрос</button>
                   <div class="form__personal">
+                    <input type="checkbox" name="personal" id="personal" class="form__personal-input" data-input-checkbox>
                     <label for="personal" class="form__personal-label">Я согласен на обработку  персональных данных</label>
-                    <input type="checkbox" name="personal" id="personal" class="form__personal-input">
                   </div>
                 </div>
               </form>
@@ -255,10 +260,25 @@
       <div class="modal__wrapper">
         <div class="modal__overlay" data-close-modal></div>
         <div class="modal__content">
-          <p class="modal__description">Обычная модалка</p>
+          <h2 class="modal__title">Закажите звонок</h2>
+          <p class="modal__description">Оставьте контакты, мы проконсультируем вас бесплатно в удобное время</p>
+          <form action="https://echo.htmlacademy.ru" method="post" class="modal__form form form--modal" data-form>
+            <div class="form__name-phone">
+              <input name="name" type="text" class="form__input" data-input-name placeholder="Имя">
+              <input name="phone" type="text" class="form__input" data-input-phone placeholder="Телефон">
+            </div>
+            <textarea name="question" cols="30" rows="10" class="form__textarea" data-input-textarea placeholder="Ваш запрос"></textarea>
+            <div class="form__send-block">
+              <button type="submit" class="btn form__btn btn--black" data-btn>Задать вопрос</button>
+              <div class="form__personal">
+                <input type="checkbox" name="personal" id="personal_modal" class="form__personal-input" data-input-checkbox>
+                <label for="personal_modal" class="form__personal-label">Я согласен на обработку  персональных данных</label>
+              </div>
+            </div>
+          </form>
           <button class="modal__close-btn btn-reset" type="button" aria-label="Закрыть попап" data-close-modal>
             <svg width="15" height="15">
-              <use xlink:href="img/sprite_auto.svg#icon-close"></use>
+              <use xlink:href="img/sprite_auto.svg#close"></use>
             </svg>
           </button>
         </div>
