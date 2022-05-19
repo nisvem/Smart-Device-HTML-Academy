@@ -142,6 +142,28 @@
             </ul>
           </div>
         </section>
+        <section class="feedback">
+          <div class="container feedback__container">
+            <div class="feedback__block">
+              <h2 class="feedback__title">Остались вопросы? Задайте их нам!</h2>
+              <p class="feedback__description">Мы проконсультируем Вас бесплатно</p>
+              <form action="POST" class="feedback__form form"> 
+                <div class="from__name-phone">
+                  <input name="name" type="text" class="form__input" placeholder="Имя">
+                  <input name="phone" type="text" class="form__input" placeholder="Телефон">
+                </div>
+                <textarea name="question" id="" cols="30" rows="10" class="form__textarea" placeholder="Ваш запрос"></textarea>
+                <div class="form__send-block">
+                  <button type="submit" class="btn form__btn btn--black">Задать вопрос</button>
+                  <div class="form__personal">
+                    <label for="personal" class="form__personal-label">Я согласен на обработку  персональных данных</label>
+                    <input type="checkbox" name="personal" id="personal" class="form__personal-input">
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </section>
       </main>
       <footer class="footer">
         <div class="container footer__container">
@@ -177,7 +199,7 @@
               </li>
             </ul>
           </div>
-          <div class="footer__section footer__section--site footer__section--close">
+          <div class="footer__section footer__section--site footer__section--open">
             <p class="footer__section-title" data-accordion>Разделы сайта</p>
             <div class="footer__section-lists">
               <ul class="footer__section-list">
