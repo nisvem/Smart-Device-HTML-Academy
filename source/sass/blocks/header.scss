@@ -14,64 +14,63 @@
   @include vp-767 {
     padding: 15px 0 20px;
   }
+}
 
-  &__container {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
+.header__container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header__contacts {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 465px;
+  margin-bottom: 8px;
+
+  @include vp-1023 {
+    width: 100px;
+    height: 40px;
+    margin-bottom: 15px;
+    margin-right: 13px;
   }
 
-  &__contacts {
-    display: flex;
-    flex-direction: row;
+  @include vp-767 {
+    margin-bottom: 0;
+    margin-right: 10px;
+    margin-top: -5px;
+  }
+}
+
+.header__link {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-family: "PT Mono", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 18px;
+  color: $color-alice-blue;
+  margin-right: 5px;
+
+  @include vp-1023 {
     align-items: center;
-    justify-content: space-between;
-    width: 465px;
-    margin-bottom: 8px;
-
-    @include vp-1023 {
-      width: 100px;
-      height: 40px;
-      margin-bottom: 15px;
-      margin-right: 13px;
-    }
-
-    @include vp-767 {
-      margin-bottom: 0;
-      margin-right: 10px;
-      margin-top: -5px;
-    }
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    margin-right: 0;
   }
 
-  &__link {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    font-family: "PT Mono", sans-serif;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 18px;
-
-    color: $color-alice-blue;
-    margin-right: 5px;
-
-    @include vp-1023 {
-      align-items: center;
-      justify-content: center;
-      width: 40px;
-      height: 40px;
-      margin-right: 0;
-    }
-  }
-
-  &__link-text {
+  span {
     @include vp-1023 {
       display: none;
     }
   }
 
-  &__svg {
+  svg {
     width: 20px;
     height: 20px;
     margin-right: 15px;
@@ -80,13 +79,13 @@
       margin-right: 0;
     }
   }
+}
 
-  &__callback {
-    margin-right: 60px;
-    margin-bottom: 5px;
+.header__callback {
+  margin-right: 60px;
+  margin-bottom: 5px;
 
-    @include vp-1023 {
-      display: none;
-    }
+  @include vp-1023 {
+    display: none;
   }
 }
