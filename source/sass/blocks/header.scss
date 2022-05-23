@@ -56,6 +56,10 @@
   color: $color-alice-blue;
   margin-right: 5px;
 
+  &:hover {
+    opacity: 0.8;
+  }
+
   @include vp-1023 {
     align-items: center;
     justify-content: center;

@@ -64,6 +64,10 @@
 .footer__logo {
   margin-bottom: 30px;
 
+  &:hover {
+    opacity: 0.8;
+  }
+
   @include vp-1023 {
     margin-bottom: 0;
   }
@@ -99,6 +103,10 @@
   width: 40px;
   height: 40px;
   list-style: none;
+
+  &:hover {
+    opacity: 0.8;
+  }
 }
 
 .footer__container {
@@ -127,16 +135,22 @@
     border-top: 1px solid rgba($color-alice-blue-2, 0.7);
     border-bottom: 1px solid rgba($color-alice-blue-2, 0.7);
     padding: 0 25px;
+    margin: 0;
 
     .footer__section-list {
       display: none;
     }
 
     h3 {
-      margin: 19px 0 19px;
+      padding: 19px 0 19px;
+      margin: 0;
     }
 
     h3::after {
+      top: calc(50% - 7.5px);
+      width: 15px;
+      height: 15px;
+
       background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='15' height='15' viewBox='0 0 15 15' fill='none'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M7.96875 7.03125V0H7.03125V7.03125H0V7.96875H7.03125V15H7.96875V7.96875H15V7.03125H7.96875Z' fill='%23F8FDFF'/%3E%3C/svg%3E");
     }
   }
@@ -148,7 +162,8 @@
       }
 
       h3 {
-        margin: 19px 0 15px;
+        padding: 19px 0 15px;
+        margin: 0;
       }
 
       h3::after {

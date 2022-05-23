@@ -67,6 +67,11 @@
   transition: none !important;
 }
 
+.disabled {
+  pointer-events: none;
+}
+
 body {
   font-family: "PT Mono", "Roboto", sans-serif;
+  scroll-behavior: smooth;
 }

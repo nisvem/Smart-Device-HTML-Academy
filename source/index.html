@@ -5,14 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="Описание проекта">
-    <link rel="preload" href="/fonts/RobotoCondensed-Regular.woff2" as="font">
-    <link rel="preload" href="/fonts/RobotoCondensed-Regular.woff" as="font">
-    <link rel="preload" href="/fonts/RobotoCondensed-Bold.woff2" as="font">
-    <link rel="preload" href="/fonts/RobotoCondensed-Bold.woff" as="font">
-    <link rel="preload" href="/fonts/PTMono-Regular.woff2" as="font">
-    <link rel="preload" href="/fonts/PTMono-Regular.woff" as="font">
-    <link rel="preload" href="/fonts/Roboto-Medium.woff2" as="font">
-    <link rel="preload" href="/fonts/Roboto-Medium.woff" as="font">
+    <link rel="preload" href="/fonts/RobotoCondensed-Regular.woff2" as="font" crossorigin>
+    <link rel="preload" href="/fonts/RobotoCondensed-Regular.woff" as="font" crossorigin>
+    <link rel="preload" href="/fonts/RobotoCondensed-Bold.woff2" as="font" crossorigin>
+    <link rel="preload" href="/fonts/RobotoCondensed-Bold.woff" as="font" crossorigin>
+    <link rel="preload" href="/fonts/PTMono-Regular.woff2" as="font" crossorigin>
+    <link rel="preload" href="/fonts/PTMono-Regular.woff" as="font" crossorigin>
+    <link rel="preload" href="/fonts/Roboto-Medium.woff2" as="font" crossorigin>
+    <link rel="preload" href="/fonts/Roboto-Medium.woff" as="font" crossorigin>
     <title>Smart Device</title>
     <link rel="stylesheet" href="/css/style.min.css">
   </head>
@@ -20,7 +20,7 @@
     <div class="wrapper">
       <header class="header">
         <div class="container header__container">
-          <a href="#" class="logo logo--small header__logo">
+          <a href="#" class="logo logo--small header__logo disabled">
             <img src="./img/svg/logo.svg" width="55" height="55"  alt="Smart Device" title="Smart Device">
             <div class="logo__description">
               <span class="logo__title">Smart Device</span>
@@ -166,8 +166,8 @@
               <p>Мы проконсультируем Вас бесплатно</p>
               <form action="https://echo.htmlacademy.ru" method="post" class="feedback__form form" data-form>
                 <div class="form__name-phone">
-                  <input name="name" type="text" data-input-name placeholder="Имя">
-                  <input name="phone" type="text" data-input-phone placeholder="Телефон">
+                  <input name="name" required type="text" data-input-name placeholder="Имя">
+                  <input name="phone" required type="text" data-input-phone placeholder="Телефон">
                 </div>
                 <textarea name="question" cols="30" rows="10" data-input-textarea placeholder="Ваш запрос"></textarea>
                 <div class="form__send-block">
@@ -276,8 +276,8 @@
           <p>Оставьте контакты, мы проконсультируем вас бесплатно в удобное время</p>
           <form action="https://echo.htmlacademy.ru" method="post" class="modal__form form form--modal" data-form>
             <div class="form__name-phone">
-              <input name="name" type="text" data-input-name placeholder="Имя">
-              <input name="phone" type="text" data-input-phone placeholder="Телефон">
+              <input name="name" required type="text" data-input-name placeholder="Имя">
+              <input name="phone" required type="text" data-input-phone placeholder="Телефон">
             </div>
             <textarea name="question" cols="30" rows="10" data-input-textarea placeholder="Ваш запрос"></textarea>
             <div class="form__send-block">

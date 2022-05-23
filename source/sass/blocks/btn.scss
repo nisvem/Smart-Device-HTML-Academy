@@ -17,6 +17,7 @@
   background-color: $color-deep-sky-blue;
   border: none;
   cursor: pointer;
+  user-select: none;
 
   transition: opacity $trans-default;
 
@@ -35,7 +36,7 @@
     background-color: $color-transparent;
     border: 1px solid $color-alice-blue;
     width: 160px;
-    height: 40px;
+    min-height: 40px;
     box-sizing: border-box;
     padding: 10px 15px;
     font-size: 14px;
@@ -48,7 +49,6 @@
     font-size: 16px;
     line-height: 19px;
     padding: 15px 25px;
-    white-space: nowrap;
     min-width: 265px;
 
     @include vp-1023 {
@@ -68,7 +68,7 @@
     color: $color-deep-sky-blue;
     border: 1px solid $color-deep-sky-blue;
     width: 180px;
-    height: 45px;
+    min-height: 45px;
     font-weight: 700;
     font-size: 14px;
     line-height: 16px;
@@ -82,7 +82,7 @@
       font-size: 14px;
       line-height: 16px;
       width: 160px;
-      height: 35px;
+      min-height: 35px;
     }
   }
 
