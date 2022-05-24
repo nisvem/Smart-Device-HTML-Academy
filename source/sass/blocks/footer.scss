@@ -73,22 +73,27 @@
   }
 
   @include vp-767 {
-    margin-bottom: 20px;
+    margin-bottom: 16px;
   }
 }
 
 .footer__social-list {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
   margin-left: 10px;
   gap: 15px;
   padding: 0;
+  margin-right: 10px;
+  width: max-content;
+  max-width: 320px;
 
   @include vp-1023 {
     margin-bottom: 0;
     margin-left: 0;
-    margin-top: 10px;
-    margin-right: -5px;
+    margin-top: 4px;
+    margin-right: -7px;
   }
 
   @include vp-767 {
@@ -107,6 +112,14 @@
   &:hover {
     opacity: 0.8;
   }
+}
+
+.footer__social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
 }
 
 .footer__container {

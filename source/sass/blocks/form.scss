@@ -2,25 +2,29 @@
   display: flex;
   flex-direction: column;
 
-  &--modal {
+  &.form--modal {
     .form__name-phone {
       flex-direction: column;
       gap: 20px;
     }
 
     textarea {
-      margin-bottom: 25px;
+      margin-bottom: 27px;
     }
 
     .form__send-block {
       flex-direction: column;
       justify-content: flex-start;
       align-items: stretch;
-      gap: 20px;
+      gap: 16px;
     }
 
     .form__personal {
       width: 100%;
+
+      label {
+        margin-left: 10px;
+      }    
     }
 
     .form__btn {
@@ -49,12 +53,23 @@
   input {
     height: 50px;
     padding: 15px;
+    width: 100%;
 
-    &--error {
+    & + .form__text-error {
+      display: none;
+    }
+
+    &.form__input--error {
       border: 1px solid rgba($color-torch-red, 0.5);
+      position: relative;
 
-      &[type="checkbox"] + label::before {
-        border: 1px solid rgba($color-torch-red, 0.5);
+      & + .form__text-error {
+        position: absolute;
+        display: flex;
+        top: -20px;
+        left: 0px;
+        font-size: 14px;
+        color: $color-torch-red;
       }
     }
   }
@@ -66,9 +81,15 @@
 
     @include vp-767 {
       max-height: 180px;
-      margin-bottom: 32px;
+      margin-bottom: 28px;
     }
   }
+}
+
+.form__name,
+.form__phone {
+  width: 100%;
+  position: relative;
 }
 
 .form__name-phone {
@@ -102,6 +123,7 @@
 
 .form__personal {
   width: 260px;
+  position: relative;
 
   @include vp-1023 {
     margin-right: 60px;
@@ -128,7 +150,7 @@
       width: 260px;
       height: 30px;
       margin-right: 60px;
-      margin-bottom: 5px;
+      margin-bottom: -2px;
     }
 
     &::before {
@@ -151,8 +173,24 @@
   input {
     display: none;
 
+    & + label + .form__text-error {
+      display: none;
+    }
+
+    &.form__input--error + label {
+      & + .form__text-error {
+        position: absolute;
+        display: flex;
+        top: -20px;
+        left: 0px;
+        font-size: 14px;
+        color: $color-torch-red;
+      }
+    }
+
     &:checked + label {
       &::before {
+        border-color: $color-default-white;
         background-position: center center;
         background-repeat: no-repeat;
         background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='9' height='6' viewBox='0 0 9 6' fill='none'%3E%3Cpath d='M0.988525 2.33333L3.7778 5L7.96171 1' stroke='white'/%3E%3C/svg%3E");

@@ -59,6 +59,7 @@
   list-style: none;
   padding: 0;
   margin: 0;
+  flex-wrap: wrap;
 
   @include vp-1023 {
     gap: 30px;
@@ -70,6 +71,7 @@
   display: flex;
   flex: 1;
   height: 650px;
+  min-width: 20%;
   background-color: rgba($color-black-peral-3, 0.5);
   background-position: center;
   background-size: cover;
@@ -83,78 +85,150 @@
   &--one {
     background-image: url("../img/service_1_desktop.jpg");
 
+    @supports (background-image: url('../img/service_1_desktop.webp')) {
+      background-image: url('../img/service_1_desktop.webp');
+    }
+
     @include retina {
       @media (min-width: $vp-1023) {
         background-image: url("../img/service_1_desktop@2x.jpg");
+
+        @supports (background-image: url('../img/service_1_desktop@2x.webp')) {
+          background-image: url('../img/service_1_desktop@2x.webp');
+        }
       }
 
       @include vp-1023 {
         background-image: url("../img/service_1_tablet@2x.jpg");
+
+        @supports (background-image: url('../img/service_1_tablet@2x.webp')) {
+          background-image: url('../img/service_1_tablet@2x.webp');
+        }
       }
 
       @include vp-767 {
         background-image: url("../img/service_1_mobile@2x.jpg");
+
+        @supports (background-image: url('../img/service_1_mobile@2x.webp')) {
+          background-image: url('../img/service_1_mobile@2x.webp');
+        }
       }
     }
 
     @include vp-1023 {
       background-image: url("../img/service_1_tablet.jpg");
+
+      @supports (background-image: url('../img/service_1_tablet.webp')) {
+        background-image: url('../img/service_1_tablet.webp');
+      }
     }
 
     @include vp-767 {
       background-image: url("../img/service_1_mobile.jpg");
+
+      @supports (background-image: url('../img/service_1_mobile.webp')) {
+        background-image: url('../img/service_1_mobile.webp');
+      }
     }
   }
 
   &--two {
     background-image: url("../img/service_2_desktop.jpg");
 
+    @supports (background-image: url('../img/service_2_desktop.webp')) {
+      background-image: url('../img/service_2_desktop.webp');
+    }
+
     @include retina {
       @media (min-width: $vp-1023) {
         background-image: url("../img/service_2_desktop@2x.jpg");
+
+        @supports (background-image: url('../img/service_2_desktop@2x.webp')) {
+          background-image: url('../img/service_2_desktop@2x.webp');
+        }
       }
 
       @include vp-1023 {
         background-image: url("../img/service_2_tablet@2x.jpg");
+
+        @supports (background-image: url('../img/service_2_tablet@2x.webp')) {
+          background-image: url('../img/service_2_tablet@2x.webp');
+        }
       }
 
       @include vp-767 {
         background-image: url("../img/service_2_mobile@2x.jpg");
+
+        @supports (background-image: url('../img/service_2_mobile@2x.webp')) {
+          background-image: url('../img/service_2_mobile@2x.webp');
+        }
       }
     }
 
     @include vp-1023 {
       background-image: url("../img/service_2_tablet.jpg");
+
+      @supports (background-image: url('../img/service_2_tablet.webp')) {
+        background-image: url('../img/service_2_tablet.webp');
+      }
     }
 
     @include vp-767 {
       background-image: url("../img/service_2_mobile.jpg");
+
+      @supports (background-image: url('../img/service_2_mobile.webp')) {
+        background-image: url('../img/service_2_mobile.webp');
+      }
     }
   }
 
   &--three {
     background-image: url("../img/service_3_desktop.jpg");
 
+    @supports (background-image: url('../img/service_3_desktop.webp')) {
+      background-image: url('../img/service_3_desktop.webp');
+    }
+
     @include retina {
       @media (min-width: $vp-1023) {
         background-image: url("../img/service_3_desktop@2x.jpg");
+
+        @supports (background-image: url('../img/service_3_desktop@2x.webp')) {
+          background-image: url('../img/service_3_desktop@2x.webp');
+        }
       }
 
       @include vp-1023 {
         background-image: url("../img/service_3_tablet@2x.jpg");
+
+        @supports (background-image: url('../img/service_3_tablet@2x.webp')) {
+          background-image: url('../img/service_3_tablet@2x.webp');
+        }
       }
 
       @include vp-767 {
         background-image: url("../img/service_3_mobile@2x.jpg");
+
+        @supports (background-image: url('../img/service_3_mobile@2x.webp')) {
+          background-image: url('../img/service_3_mobile@2x.webp');
+        }
       }
     }
 
     @include vp-1023 {
       background-image: url("../img/service_3_tablet.jpg");
+
+      @supports (background-image: url('../img/service_3_tablet.webp')) {
+        background-image: url('../img/service_3_tablet.webp');
+      }
     }
 
     @include vp-767 {
       background-image: url("../img/service_3_mobile.jpg");
+
+      @supports (background-image: url('../img/service_3_mobile.webp')) {
+        background-image: url('../img/service_3_mobile.webp');
+      }
     }
   }
 }

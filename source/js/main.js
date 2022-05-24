@@ -3,6 +3,8 @@ import {initModals} from './modules/modals/init-modals';
 import './modules/accordion';
 import './modules/toggle';
 import './modules/validator';
+import './modules/mobile-text';
+import './modules/utils';
 // ---------------------------------
 
 window.addEventListener('DOMContentLoaded', () => {
@@ -22,11 +24,6 @@ window.addEventListener('DOMContentLoaded', () => {
   });
 });
 
-if (window.screen.width < 768) {
-  document.querySelectorAll('[data-name-mobile]').forEach((el) => {
-    el.innerHTML = el.dataset.nameMobile;
-  });
-}
 
 // ---------------------------------
 
