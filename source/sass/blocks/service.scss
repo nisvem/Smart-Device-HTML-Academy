@@ -52,26 +52,22 @@
 }
 
 .service__list {
-  display: flex;
-  flex-direction: row;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
   gap: 85px;
-  justify-content: space-between;
   list-style: none;
   padding: 0;
   margin: 0;
-  flex-wrap: wrap;
 
   @include vp-1023 {
     gap: 30px;
-    flex-direction: column;
+    grid-template-columns: auto;
   }
 }
 
 .service__item {
   display: flex;
-  flex: 1;
   height: 650px;
-  min-width: 20%;
   background-color: rgba($color-black-peral-3, 0.5);
   background-position: center;
   background-size: cover;
@@ -79,6 +75,7 @@
 
   @include vp-1023 {
     min-height: 250px;
+    height: auto;
     width: 100%;
   }
 

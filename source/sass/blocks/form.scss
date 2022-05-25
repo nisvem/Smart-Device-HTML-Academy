@@ -13,7 +13,7 @@
     }
 
     .form__send-block {
-      flex-direction: column;
+      flex-direction: column-reverse;
       justify-content: flex-start;
       align-items: stretch;
       gap: 16px;
@@ -108,13 +108,13 @@
 
 .form__send-block {
   display: flex;
-  flex-direction: row;
+  flex-direction: row-reverse;
   gap: 50px;
   justify-content: space-between;
   align-items: flex-end;
 
   @include vp-767 {
-    flex-direction: column;
+    flex-direction: column-reverse;
     justify-content: flex-start;
     align-items: center;
     gap: 25px;
